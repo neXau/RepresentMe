@@ -2,3 +2,47 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    display: block;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+%general-fontstyle {
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+h1 {
+    @extend %general-fontstyle;
+}
+h2 {
+    @extend %general-fontstyle;
+}
+h3 {
+    @extend %general-fontstyle;
+}
+
+
+i {
+
+}
+b {
+
+}
+mark {
+    
+}
+
+
+
+.col-100 {
+
+}
+.col-75 {
+
+}
+.col-50 {
+
+}
