@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ---- */
+@keyframes cont-anim {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 800px;
+  }
+}
+.nxu-spoilers details {
+  padding: 10px;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+}
+.nxu-spoilers summary .title {
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+}
+.nxu-spoilers details:not([open]) .title:after {
+  display: inline;
+  content: " [Закрыт] ";
+  color: #888;
+  float: right;
+}
+.nxu-spoilers details[open] .title:after {
+  display: inline;
+  content: " [Открыт] ";
+  color: #888;
+  float: right;
+}
+.nxu-spoilers div.content {
+  font-family: Open Sans;
+  font-size: 0.9rem;
+  padding: 10px;
+  animation: cont-anim 1s;
+  animation-timing-function: linear;
+}
+.nxu-spoilers div.content a {
+  text-decoration: none;
+  color: orangered;
+  border-bottom: 1px dotted;
+}
+.nxu-spoilers details summary {
+  display: block;
+}
+.nxu-spoilers details summary::-webkit-details-marker {
+  display: none;
+}
+.nxu-spoilers details summary::before {
+  content: "+ ";
+  display: inline-block;
+  padding-right: 5px;
+  transform-origin: center;
+  transition: 0.2s;
+}
+.nxu-spoilers details[open] summary::before {
+  transform: rotate(45deg);
+  color: #999;
+}

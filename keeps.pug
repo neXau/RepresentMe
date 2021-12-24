@@ -1,0 +1,29 @@
+mixin spoiler-post(title)
+  .container
+    .nxu-spoilers
+      details
+        summary
+          span.title= title
+        .content
+          if block
+            block
+          else
+            p No content provided
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="stylesheet", href="./assets/default/css/style.css")
+        link(rel="stylesheet", href="./assets/default/css/spoilers.css")
+
+        title Document
+    body 
+
+        a(href="./index.html") Главная
+
+        +spoiler-post('Крутие фишки CSS')
+            a(href="#") Sssss 
