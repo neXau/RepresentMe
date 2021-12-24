@@ -6,7 +6,7 @@
 }
 
 *::selection {
-  background-color: rgba(220, 20, 60, 0.65);
+  background-color: rgba(220, 77, 20, 0.65);
   color: #fff;
 }
 
@@ -89,4 +89,21 @@
 .nxu-spoilers details[open] summary::before {
   transform: rotate(45deg);
   color: #999;
+}
+.nxu-spoilers hr {
+  margin: 10px 0;
+  border: none;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(90deg, rgba(199, 199, 199, 0.5) 8%, #333333 88%);
+}
+.nxu-spoilers ul {
+  margin-left: 18px;
+  list-style: "🔴 ";
+}
+.nxu-spoilers ul li {
+  padding-bottom: 10px;
+}
+.nxu-spoilers ul li::marker {
+  font-size: 0.6rem;
 }

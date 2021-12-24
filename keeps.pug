@@ -8,7 +8,7 @@ mixin spoiler-post(title)
           if block
             block
           else
-            p No content provided
+            p Хмм... Кажется тут ничего нет.
 
 doctype html
 html(lang="en")
@@ -25,8 +25,11 @@ html(lang="en")
 
         a(href="./index.html") Главная
 
-        +spoiler-post('[CSS] Крутие фишки')
-            a(href="#") Sssss 
+        +spoiler-post('[CSS] Крутие фишки и полезные статьи')
+            a(href="https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e") Normalize CSS or CSS Reset?! <br>
+            a(href="https://www.kizu.ru/ru/conditions-for-css-variables/") Условия для CSS-переменных <br>
+            a(href="https://habr.com/ru/post/252181/") Количественные CSS селекторы
+            
 
         +spoiler-post('[CSS] Градиенты, Фоны, Паттерны')
             a(href="https://www.svgbackgrounds.com/") Красивые SVG фоны для сайта <br>
@@ -35,6 +38,35 @@ html(lang="en")
             a(href="https://github.com/bansal-io/pattern.css") CSS библиотека Паттернов <br>
             a(href="https://github.com/riccardoscalco/textures") JS Создание паттернов текстур <br>
             a(href="https://mycolor.space/") Генератор градиентов <br>
-            a(href="https://html5book.ru/krasivye-gradienty/") Круетые Градиенты
-        +spoiler-post('[CSS] Полезные статьи')
-            a(href="https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e") Normalize CSS or CSS Reset?!
+            a(href="https://html5book.ru/krasivye-gradienty/") Крутые Градиенты <br>
+            a(href="https://patternico.com/") Создание фонов с картинок <br>
+            a(href="https://patterninja.com/") Генератор фонов с картинок 2 <br>
+            a(href="https://heropatterns.com/") Ещё один генератор фонов <br>
+            a(href="https://github.com/lucagez/bars") Прогресс бары 
+
+        +spoiler-post('[JS] Разные библиотеки')
+            a(href="https://marcbruederlin.github.io/particles.js") Плагин фоновых частиц <br>
+            a(href="https://mattboldt.com/demos/typed-js/") Анимация набора текста на экране  <br>
+            hr
+            a(href="https://greensock.com/") Greensock библиотека для крутой анимации <br>
+            a(href="https://github.com/mrdoob/three.js/") Three.js  <br>
+            a(href="https://github.com/juliangarnier/anime") JavaScript animation engine  <br>
+            a(href="https://github.com/mojs/mojs") The motion graphics toolbelt for the web.  <br>
+            a(href="https://github.com/maxwellito/vivus") Vivus, bringing your SVGs to life   <br>
+            a(href="https://github.com/jlmakes/scrollreveal") Animate elements as they scroll into view.
+            a(href="https://github.com/popmotion/popmotion") The animator's toolbox
+
+        +spoiler-post('Доплнительные ссылки')
+            a(href="https://www.telderi.ru/ru") Покупка продажа сайтов
+        
+        +spoiler-post('Идеи')
+            ul
+                li Написать плагин для WP который позволил бы получать данные о доставке через транспортные компании 
+                    a(href="https://dev.ukrposhta.ua/documentation") API Укр Почта
+                    span= ', '
+                    a(href="https://justin.ua/api/api_justin_documentation.pdf") API Justin
+                    span= ', '
+                    a(href="https://devcenter.novaposhta.ua/blog/%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%D0%BE%D0%B2-%D0%BA-api") API Новая почта 
+                    span= ', '
+                    a(href="https://github.com/lis-dev/intime-api-2") API Интайм 
+                li 222
