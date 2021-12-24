@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
 }
+*::selection {
+  background-color: rgba(220, 20, 60, 0.65);
+  color: #fff;
+}
 
 .container {
   display: block;
@@ -15,13 +19,22 @@
 @keyframes cont-anim {
   0%   {
     max-height: 0px;
-  }
+    filter: blur(2px) brightness(0.2);
+    -webkit-filter: blur(2px) brightness(0.2);
+}
+  50% {
+    filter: blur(0px) brightness(1);
+    -webkit-filter: blur(0px) brightness(1);
+}
   100% {
-    max-height: 800px;
-  }
+    filter: blur(0px) brightness(1);
+    -webkit-filter: blur(0px) brightness(1);
+    max-height: 100vh;
+}
 }
 
 .nxu-spoilers {
+  padding: 10px;
   details {
     padding: 10px;
 
@@ -51,6 +64,9 @@
     padding: 10px;
     animation: cont-anim 1s;
     animation-timing-function: linear;
+    overflow: hidden;
+    letter-spacing: 0.06rem;
+    line-height: 2;
   }
 
   div.content a {
